@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEON//TECH — Système</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <span class="dot"></span> SYSTÈME EN LIGNE
+    <span class="sep">//</span>
+    <span id="clock">--:--:--</span>
+    <span class="sep">//</span>
+    <span id="status">NODE-01</span>
+  </header>
+
+  <nav class="nav">
+    <div class="logo">NEON<span>//</span>TECH</div>
+    <ul>
+      <li><a href="#accueil" class="active">Accueil</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#terminal">Terminal</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="accueil" class="hero">
+      <p class="tag">&gt;_ initialisation...</p>
+      <h1>
+        <span class="line">SYSTÈMES</span>
+        <span class="line glitch" data-text="CYBERNETIQUES">CYBERNETIQUES</span>
+      </h1>
+      <p class="lead">
+        Infrastructure réseau, sécurité offensive et automatisation.
+        Latence nulle. Fiabilité 99.99%.
+      </p>
+      <div class="cta">
+        <button class="btn primary" onclick="launchSequence()">INITIALISER</button>
+        <a class="btn" href="#services">EXPLORER</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b data-count="128">0</b><span>NODES</span></div>
+        <div class="stat"><b data-count="99" data-suffix="%">0</b><span>UPTIME</span></div>
+        <div class="stat"><b data-count="4" data-suffix="ms">0</b><span>LATENCE</span></div>
+        <div class="stat"><b data-count="1024">0</b><span>OPS/SEC</span></div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2 class="section-title">// SERVICES</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>01 — RÉSEAU</h3>
+          <p>Architecture mesh, routage dynamique et déploiement edge en moins de 60 secondes.</p>
+          <code>&gt; net.init --mesh</code>
+        </article>
+        <article class="card">
+          <h3>02 — SÉCURITÉ</h3>
+          <p>Audit offensif, durcissement des accès et surveillance comportementale en temps réel.</p>
+          <code>&gt; sec.scan --deep</code>
+        </article>
+        <article class="card">
+          <h3>03 — AUTOMATISATION</h3>
+          <p>Pipelines CI/CD, orchestration de tâches et scripts auto-réparateurs.</p>
+          <code>&gt; auto.pipe --run</code>
+        </article>
+      </div>
+    </section>
+
+    <section id="terminal" class="section">
+      <h2 class="section-title">// TERMINAL</h2>
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="tl red"></span><span class="tl yellow"></span><span class="tl green"></span>
+          <span class="term-title">root@neontech:~/</span>
+        </div>
+        <pre id="termOut"></pre>
+        <div class="term-input">
+          <span class="prompt">&gt;</span>
+          <input id="cmd" type="text" autocomplete="off" spellcheck="false" placeholder="Tapez 'help' puis Entrée" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 class="section-title">// CONTACT</h2>
+      <form class="form" onsubmit="sendForm(event)">
+        <input type="text" placeholder="IDENTIFIANT" required />
+        <input type="email" placeholder="EMAIL" required />
+        <textarea placeholder="MESSAGE" rows="4" required></textarea>
+        <button class="btn primary" type="submit">TRANSMETTRE</button>
+        <p id="formMsg" class="msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 NEON//TECH</span>
+    <span class="sep">//</span>
+    <span id="uptime">UPTIME 0s</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
